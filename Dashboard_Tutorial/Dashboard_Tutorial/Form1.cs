@@ -30,10 +30,14 @@ namespace Dashboard_Tutorial
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+            
+        }
+        private void panel5_Click(object sender, EventArgs e)
+        {
+            this.ActiveControl = null;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void exitBtn_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -102,6 +106,19 @@ namespace Dashboard_Tutorial
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start(new ProcessStartInfo("https://www.flaticon.com/") {UseShellExecute = true});
+        }
+
+        private void textBox1_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "")
+            {
+                textBox1.Text = "Search for something...";
+            }
         }
     }
 }

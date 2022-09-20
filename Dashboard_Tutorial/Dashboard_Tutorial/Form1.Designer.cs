@@ -42,7 +42,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.exitBtn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -96,6 +96,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(130, 346);
             this.panel1.TabIndex = 0;
+            this.panel1.Click += new System.EventHandler(this.panel5_Click);
             // 
             // pnlNav
             // 
@@ -117,7 +118,7 @@
             this.btnSettings.Margin = new System.Windows.Forms.Padding(2);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(130, 25);
-            this.btnSettings.TabIndex = 2;
+            this.btnSettings.TabIndex = 5;
             this.btnSettings.Text = "Settings";
             this.btnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnSettings.UseVisualStyleBackColor = true;
@@ -136,7 +137,7 @@
             this.btnContactUs.Margin = new System.Windows.Forms.Padding(2);
             this.btnContactUs.Name = "btnContactUs";
             this.btnContactUs.Size = new System.Drawing.Size(130, 25);
-            this.btnContactUs.TabIndex = 2;
+            this.btnContactUs.TabIndex = 4;
             this.btnContactUs.Text = "Contact Us";
             this.btnContactUs.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnContactUs.UseVisualStyleBackColor = true;
@@ -155,7 +156,7 @@
             this.btnCalender.Margin = new System.Windows.Forms.Padding(2);
             this.btnCalender.Name = "btnCalender";
             this.btnCalender.Size = new System.Drawing.Size(130, 25);
-            this.btnCalender.TabIndex = 2;
+            this.btnCalender.TabIndex = 3;
             this.btnCalender.Text = "Calender";
             this.btnCalender.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnCalender.UseVisualStyleBackColor = true;
@@ -174,7 +175,7 @@
             this.btnAnalytics.Margin = new System.Windows.Forms.Padding(2);
             this.btnAnalytics.Name = "btnAnalytics";
             this.btnAnalytics.Size = new System.Drawing.Size(130, 25);
-            this.btnAnalytics.TabIndex = 2;
+            this.btnAnalytics.TabIndex = 1;
             this.btnAnalytics.Text = "Analytics";
             this.btnAnalytics.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnAnalytics.UseVisualStyleBackColor = true;
@@ -193,7 +194,7 @@
             this.btnDashboard.Margin = new System.Windows.Forms.Padding(2);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(130, 25);
-            this.btnDashboard.TabIndex = 1;
+            this.btnDashboard.TabIndex = 0;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnDashboard.UseVisualStyleBackColor = true;
@@ -211,6 +212,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(130, 93);
             this.panel2.TabIndex = 0;
+            this.panel2.Click += new System.EventHandler(this.panel5_Click);
             // 
             // label2
             // 
@@ -223,6 +225,7 @@
             this.label2.Size = new System.Drawing.Size(123, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Some User Text here";
+            this.label2.Click += new System.EventHandler(this.panel5_Click);
             // 
             // label1
             // 
@@ -235,6 +238,7 @@
             this.label1.Size = new System.Drawing.Size(88, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "User Name";
+            this.label1.Click += new System.EventHandler(this.panel5_Click);
             // 
             // pictureBox1
             // 
@@ -246,6 +250,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.panel5_Click);
             // 
             // label3
             // 
@@ -258,6 +263,7 @@
             this.label3.Size = new System.Drawing.Size(162, 32);
             this.label3.TabIndex = 1;
             this.label3.Text = "Dashboard";
+            this.label3.Click += new System.EventHandler(this.panel5_Click);
             // 
             // textBox1
             // 
@@ -265,28 +271,30 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Myanmar Text", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox1.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox1.Location = new System.Drawing.Point(420, 13);
+            this.textBox1.Location = new System.Drawing.Point(420, 19);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(271, 26);
-            this.textBox1.TabIndex = 2;
+            this.textBox1.Size = new System.Drawing.Size(271, 20);
+            this.textBox1.TabIndex = 6;
             this.textBox1.Text = "Search for something...";
+            this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
+            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
-            // button1
+            // exitBtn
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(700, 2);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(20, 22);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "X";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.exitBtn.FlatAppearance.BorderSize = 0;
+            this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.exitBtn.ForeColor = System.Drawing.Color.White;
+            this.exitBtn.Location = new System.Drawing.Point(700, 2);
+            this.exitBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.Size = new System.Drawing.Size(20, 22);
+            this.exitBtn.TabIndex = 8;
+            this.exitBtn.Text = "X";
+            this.exitBtn.UseVisualStyleBackColor = true;
+            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
             // panel3
             // 
@@ -300,6 +308,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(210, 86);
             this.panel3.TabIndex = 4;
+            this.panel3.Click += new System.EventHandler(this.panel5_Click);
             // 
             // pictureBox2
             // 
@@ -311,6 +320,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.panel5_Click);
             // 
             // label4
             // 
@@ -323,6 +333,7 @@
             this.label4.Size = new System.Drawing.Size(83, 29);
             this.label4.TabIndex = 1;
             this.label4.Text = "$1234";
+            this.label4.Click += new System.EventHandler(this.panel5_Click);
             // 
             // label6
             // 
@@ -335,6 +346,7 @@
             this.label6.Size = new System.Drawing.Size(121, 13);
             this.label6.TabIndex = 1;
             this.label6.Text = "Details of Last 28 Days";
+            this.label6.Click += new System.EventHandler(this.panel5_Click);
             // 
             // label5
             // 
@@ -347,6 +359,7 @@
             this.label5.Size = new System.Drawing.Size(70, 21);
             this.label5.TabIndex = 1;
             this.label5.Text = "Earnings";
+            this.label5.Click += new System.EventHandler(this.panel5_Click);
             // 
             // panel4
             // 
@@ -360,6 +373,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(212, 86);
             this.panel4.TabIndex = 4;
+            this.panel4.Click += new System.EventHandler(this.panel5_Click);
             // 
             // pictureBox3
             // 
@@ -371,6 +385,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.panel5_Click);
             // 
             // label7
             // 
@@ -383,6 +398,7 @@
             this.label7.Size = new System.Drawing.Size(73, 29);
             this.label7.TabIndex = 1;
             this.label7.Text = "12K+";
+            this.label7.Click += new System.EventHandler(this.panel5_Click);
             // 
             // label8
             // 
@@ -395,6 +411,7 @@
             this.label8.Size = new System.Drawing.Size(121, 13);
             this.label8.TabIndex = 1;
             this.label8.Text = "Details of Last 28 Days";
+            this.label8.Click += new System.EventHandler(this.panel5_Click);
             // 
             // label9
             // 
@@ -407,6 +424,7 @@
             this.label9.Size = new System.Drawing.Size(88, 21);
             this.label9.TabIndex = 1;
             this.label9.Text = "Downloads";
+            this.label9.Click += new System.EventHandler(this.panel5_Click);
             // 
             // panel6
             // 
@@ -418,6 +436,7 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(364, 127);
             this.panel6.TabIndex = 4;
+            this.panel6.Click += new System.EventHandler(this.panel5_Click);
             // 
             // pictureBox4
             // 
@@ -429,6 +448,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.panel5_Click);
             // 
             // label14
             // 
@@ -441,6 +461,7 @@
             this.label14.Size = new System.Drawing.Size(104, 21);
             this.label14.TabIndex = 1;
             this.label14.Text = "Some Graphs";
+            this.label14.Click += new System.EventHandler(this.panel5_Click);
             // 
             // panel7
             // 
@@ -452,6 +473,7 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(122, 86);
             this.panel7.TabIndex = 4;
+            this.panel7.Click += new System.EventHandler(this.panel5_Click);
             // 
             // label13
             // 
@@ -464,6 +486,7 @@
             this.label13.Size = new System.Drawing.Size(88, 52);
             this.label13.TabIndex = 1;
             this.label13.Text = "Some extra text \r\nhere to make \r\nthe tab more \r\nattractive";
+            this.label13.Click += new System.EventHandler(this.panel5_Click);
             // 
             // label15
             // 
@@ -476,6 +499,7 @@
             this.label15.Size = new System.Drawing.Size(88, 21);
             this.label15.TabIndex = 1;
             this.label15.Text = "Downloads";
+            this.label15.Click += new System.EventHandler(this.panel5_Click);
             // 
             // panel8
             // 
@@ -487,6 +511,7 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(364, 57);
             this.panel8.TabIndex = 4;
+            this.panel8.Click += new System.EventHandler(this.panel5_Click);
             // 
             // linkLabel1
             // 
@@ -497,7 +522,7 @@
             this.linkLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(146, 21);
-            this.linkLabel1.TabIndex = 2;
+            this.linkLabel1.TabIndex = 7;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "https://www.flaticon.com/";
             this.linkLabel1.UseCompatibleTextRendering = true;
@@ -526,6 +551,7 @@
             this.label12.Size = new System.Drawing.Size(115, 21);
             this.label12.TabIndex = 1;
             this.label12.Text = "Some Progress";
+            this.label12.Click += new System.EventHandler(this.panel5_Click);
             // 
             // label10
             // 
@@ -539,6 +565,7 @@
             this.label10.TabIndex = 3;
             this.label10.Text = "Details of Last 28 Days\r\nSome extra text here to make \r\nthe tab more attractive";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label10.Click += new System.EventHandler(this.panel5_Click);
             // 
             // panel5
             // 
@@ -551,6 +578,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(190, 192);
             this.panel5.TabIndex = 4;
+            this.panel5.Click += new System.EventHandler(this.panel5_Click);
             // 
             // circularProgressBar1
             // 
@@ -584,6 +612,7 @@
             this.circularProgressBar1.Text = "67%";
             this.circularProgressBar1.TextMargin = new System.Windows.Forms.Padding(5, 8, 0, 0);
             this.circularProgressBar1.Value = 68;
+            this.circularProgressBar1.Click += new System.EventHandler(this.panel5_Click);
             // 
             // Form1
             // 
@@ -597,7 +626,7 @@
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
@@ -607,6 +636,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Click += new System.EventHandler(this.panel5_Click);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -646,7 +676,7 @@
         private PictureBox pictureBox1;
         private Label label3;
         private TextBox textBox1;
-        private Button button1;
+        private Button exitBtn;
         private Panel panel3;
         private Label label4;
         private Label label6;
